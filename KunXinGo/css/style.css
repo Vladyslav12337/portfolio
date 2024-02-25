@@ -930,7 +930,7 @@ h6 {
 }
 .contacts__link {
   display: inline-block;
-  transition: all .3
+  transition: all 0.3s;
 }
 .contacts__link img {
   transition: all .3s;
