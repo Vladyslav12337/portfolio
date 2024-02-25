@@ -938,7 +938,7 @@ h6 {
   transition: all .3
 }
 .contacts__link img {
-  transition: all .3s;
+  transition: all 0.3s;
   width: 1.75rem;
   height: 1.75rem
 }
