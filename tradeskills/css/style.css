@@ -591,6 +591,9 @@ h6 {
   flex-basis: 50%;
   background: linear-gradient(17deg,#c83016 8%,#050000 80%)
 }
+.process__item p {
+  padding-bottom: 10px;
+}
 .process__blok {
   opacity: 0;
   -webkit-transform: translateX(-100px);
