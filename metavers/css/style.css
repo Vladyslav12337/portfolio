@@ -520,14 +520,17 @@ h6 {
 }
 .card {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 2.375rem
+  grid-template-columns: repeat(3,1fr)
 }
 .card__info {
   padding: 1.125rem 1.25rem 2.3125rem 1.1875rem;
   background: #090823;
   border-top-right-radius: 3.125rem;
-  border-bottom-left-radius: 3.125rem
+  border-bottom-left-radius: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .625rem
 }
 .card__img {
   border-top-right-radius: 3.125rem;
@@ -563,6 +566,9 @@ h6 {
 }
 .card__button {
   transition: all 1s;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
   padding: .75rem .875rem;
   color: #fff;
   border: 2px solid;
@@ -572,6 +578,9 @@ h6 {
   background: linear-gradient(158.4deg,#d10ed1 10.9%,#10a3da 88.221%)
 }
 .card__button--bg {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
   transition: all 1s;
   background: #000;
   border: 2px solid;
@@ -707,6 +716,9 @@ h6 {
   .work__text {
     margin-bottom: 5.375rem
   }
+  .card {
+    grid-gap: 2.375rem
+  }
   .activity__margin {
     margin-bottom: 12.5rem
   }
@@ -767,6 +779,9 @@ h6 {
   }
   .work__text {
     margin-bottom: 1.5625rem
+  }
+  .card {
+    grid-gap: 1.5625rem
   }
   .activity__margin {
     margin-bottom: 2.1875rem
@@ -1115,6 +1130,16 @@ h6 {
       margin-bottom: calc(1.5625rem + 3.8125 * (100vw - 20rem)/ 55.25)
     }
   }
+  @supports (grid-gap:clamp(1.5625rem ,1.2683823529rem + 1.4705882353vw ,2.375rem)) {
+    .card {
+      grid-gap: clamp(1.5625rem ,1.2683823529rem + 1.4705882353vw ,2.375rem)
+    }
+  }
+  @supports not (grid-gap:clamp(1.5625rem ,1.2683823529rem + 1.4705882353vw ,2.375rem)) {
+    .card {
+      grid-gap: calc(1.5625rem + .8125 * (100vw - 20rem)/ 55.25)
+    }
+  }
   @supports (margin-bottom:clamp(2.1875rem ,-1.5455316742rem + 18.665158371vw ,12.5rem)) {
     .activity__margin {
       margin-bottom: clamp(2.1875rem ,-1.5455316742rem + 18.665158371vw ,12.5rem)
@@ -1146,6 +1171,21 @@ h6 {
     .footer__container {
       gap: calc(1.25rem + 1.25 * (100vw - 62.5rem)/ 57.5)
     }
+  }
+}
+@media (min-width:768px) and (max-width:1024px) {
+  .card__button {
+    font-size: 12px
+  }
+}
+@media (min-width:816px) and (max-width:1024px) {
+  .card__button--bg {
+    font-size: 12px
+  }
+}
+@media (min-width:768px) and (max-width:816px) {
+  .card__button--bg {
+    font-size: 10px
   }
 }
 @media (any-hover:hover) {
