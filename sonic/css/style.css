@@ -312,7 +312,7 @@ body [class*=_icon-social] {
   height: 12px
 }
 .active {
-  color: #28579e
+  font-weight:700;
 }
 .hero__margin {
   margin-top: 3.125rem
