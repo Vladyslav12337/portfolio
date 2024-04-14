@@ -653,7 +653,7 @@ body [class*=_icon-social] {
   width: 100%
 }
 .block-img__picture--rectangle img {
-  width: 10rem;
+  width: 10rem !important;
   width: 100%;
   height: 100%;
   aspect-ratio: 160/240;
